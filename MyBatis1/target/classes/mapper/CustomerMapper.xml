@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.mapper.CustomerMapper">
+        <!--<mapper namespace="Cust">-->
+        <select id="find" parameterType="Integer" resultType="com.itheima.po.Customer">
+        select * from t_customer where id = #{id}
+        </select>
+        <!-- ÖÐÎÄ-->
+        <select id="findname" parameterType="Integer" resultType="com.itheima.po.Customer">
+                select * from t_customer where username like '%${value}%'
+        </select>
+        <insert id="add" parameterType="com.itheima.po.Customer">
+                insert into t_customer(username,jobs,phone)value (#{username},#{jobs},#{phone})
+        </insert>
+        <update id="update" parameterType="com.itheima.po.Customer">
+                update t_customer set username=#{username},jobs=#{jobs},phone=#{phone}
+                where id = #{id}
+        </update>
+        <delete id="del" parameterType="integer">
+                delete from t_customer where id = #{id}
+        </delete>
+</mapper>

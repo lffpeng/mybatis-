@@ -32,10 +32,7 @@
     </environments>
 
     <mappers>
-        <!--
         <mapper resource="mapper/CustomerMapper.xml"/>
-
-        -->
         <mapper resource="mapper/UserMapper1.xml"/>
     </mappers>
 </configuration>

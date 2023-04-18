@@ -32,7 +32,7 @@
         </insert>
         <update id="updateCustomer" parameterType="com.itheima.po.Customer">
                 update t customer
-                        setusername=#{username},jobs=#(jobs}.phone=#{phone]
+                        set username=#{username},jobs=#{jobs},phone=#{phone}
                         where id=#{id}
         </update>
         <!--5.删除客户信息-->
